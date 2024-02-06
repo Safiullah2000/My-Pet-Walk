@@ -1,0 +1,157 @@
+// import 'package:flutter/material.dart';
+// import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
+
+// import '../../HomeScreen/home_screen.dart';
+
+// class BottomaNaviBody extends StatefulWidget {
+//   const BottomaNaviBody({Key? key}) : super(key: key);
+
+//   @override
+//   _BottomaNaviBodyState createState() => _BottomaNaviBodyState();
+// }
+
+// class _BottomaNaviBodyState extends State<BottomaNaviBody> {
+//   late PageController _pageController;
+//   int selectedIndex = 0;
+//   bool _colorful = false;
+//   @override
+//   void initState() {
+//     super.initState();
+//     _pageController = PageController(initialPage: selectedIndex);
+//   }
+
+//   void onButtonPressed(int index) {
+//     setState(() {
+//       selectedIndex = index;
+//     });
+//     _pageController.animateToPage(selectedIndex,
+//         duration: const Duration(milliseconds: 400), curve: Curves.easeOutQuad);
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//         body: Column(
+//           children: <Widget>[
+//             // SafeArea(
+//             //     child: SwitchListTile(
+//             //   title: const Text('Colorful Nav bar'),
+//             //   value: _colorful,
+//             //   onChanged: (bool value) {
+//             //     setState(() {
+//             //       _colorful = !_colorful;
+//             //     });
+//             //   },
+//             // )),
+//             // Expanded(
+//             //   child: PageView(
+//             //     physics: const NeverScrollableScrollPhysics(),
+//             //     controller: _pageController,
+//             //     children: _listOfWidget,
+//             //   ),
+//             // ),
+//           ],
+//         ),
+//         bottomNavigationBar:
+//             // _colorful
+//             //     ?
+//             SlidingClippedNavBar.colorful(
+//           backgroundColor: Colors.white,
+//           onButtonPressed: onButtonPressed,
+//           iconSize: 30,
+//           // activeColor: const Color(0xFF01579B),
+//           selectedIndex: selectedIndex,
+//           barItems: <BarItem>[
+//             BarItem(
+//               icon: Icons.event,
+//               title: 'Home',
+//               activeColor: Colors.blue,
+//               inactiveColor: Colors.orange,
+//             ),
+//             BarItem(
+//               icon: Icons.search_rounded,
+//               title: 'History',
+//               activeColor: Colors.yellow,
+//               inactiveColor: Colors.green,
+//             ),
+//             BarItem(
+//               icon: Icons.bolt_rounded,
+//               title: 'Bin',
+//               activeColor: Colors.blue,
+//               inactiveColor: Colors.red,
+//             ),
+//             BarItem(
+//               icon: Icons.tune_rounded,
+//               title: 'Profile',
+//               activeColor: Colors.cyan,
+//               inactiveColor: Colors.purple,
+//             ),
+//           ],
+//         )
+//         // : SlidingClippedNavBar(
+//         //     backgroundColor: Colors.white,
+//         //     onButtonPressed: onButtonPressed,
+//         //     iconSize: 30,
+//         //     activeColor: const Color(0xFF01579B),
+//         //     selectedIndex: selectedIndex,
+//         //     barItems: <BarItem>[
+//         //       BarItem(
+//         //         icon: Icons.event,
+//         //         title: 'Events',
+//         //       ),
+//         //       BarItem(
+//         //         icon: Icons.search_rounded,
+//         //         title: 'Search',
+//         //       ),
+//         //       BarItem(
+//         //         icon: Icons.bolt_rounded,
+//         //         title: 'Energy',
+//         //       ),
+//         //       BarItem(
+//         //         icon: Icons.tune_rounded,
+//         //         title: 'Settings',
+//         //       ),
+//         //     ],
+//         //   ),
+//         );
+//   }
+// }
+
+// // icon size:24 for fontAwesomeIcons
+// // icons size: 30 for MaterialIcons
+
+// List<Widget> _listOfWidget = <Widget>[
+//   HomeScreen(),
+//   // Container(
+//   //   alignment: Alignment.center,
+//   //   child: const Icon(
+//   //     Icons.event,
+//   //     size: 56,
+//   //     color: Colors.brown,
+//   //   ),
+//   // ),
+//   Container(
+//     alignment: Alignment.center,
+//     child: const Icon(
+//       Icons.search,
+//       size: 56,
+//       color: Colors.brown,
+//     ),
+//   ),
+//   Container(
+//     alignment: Alignment.center,
+//     child: const Icon(
+//       Icons.bolt,
+//       size: 56,
+//       color: Colors.brown,
+//     ),
+//   ),
+//   Container(
+//     alignment: Alignment.center,
+//     child: const Icon(
+//       Icons.tune_rounded,
+//       size: 56,
+//       color: Colors.brown,
+//     ),
+//   ),
+// ];
